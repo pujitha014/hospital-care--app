@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,17 +5,15 @@ body {
   color: #333;
 }
 
-/* App Container */
 .App {
   text-align: center;
 }
 
-/* Header Styles */
 .homepage-header {
   background-color: #004aad;
   color: white;
   padding: 20px;
-  position: relative; /* Needed for positioning links */
+  position: relative;
 }
 
 .homepage-header h1 {
@@ -29,7 +26,6 @@ body {
   margin-top: 10px;
 }
 
-/* Header Links */
 .header-links {
   position: absolute;
   top: 10px;
@@ -49,13 +45,11 @@ body {
   text-decoration: underline;
 }
 
-/* Navigation */
-/* Navigation */
 .homepage-nav {
   display: flex;
-  justify-content: flex-end; /* Aligns items to the right */
+  justify-content: flex-end;
   background-color: #f8f9fa;
-  padding: 10px  20px;
+  padding: 10px 20px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -70,8 +64,6 @@ body {
   color: #002d6f;
 }
 
-
-/* Main Section */
 .homepage-main {
   padding: 20px;
 }
@@ -90,7 +82,6 @@ body {
   line-height: 1.6;
 }
 
-/* Highlights */
 .homepage-highlights {
   display: flex;
   justify-content: space-around;
@@ -106,6 +97,8 @@ body {
   width: 30%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .highlight-item h3 {
@@ -118,7 +111,20 @@ body {
   color: #555;
 }
 
-/* Footer */
+.highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9ff;
+}
+
+.highlight-item:hover h3 {
+  color: #002d6f;
+}
+
+.highlight-item:hover p {
+  color: #333;
+}
+
 .homepage-footer {
   background-color: #004aad;
   color: white;
@@ -141,7 +147,6 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .homepage-highlights {
     flex-direction: column;
@@ -151,42 +156,4 @@ body {
   .highlight-item {
     width: 80%;
   }
-}
-/* Highlight Items */
-.highlight-item {
-  background: white;
-  padding: 15px;
-  margin: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 30%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  cursor: pointer; /* Make the items clickable */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
-}
-
-.highlight-item h3 {
-  font-size: 1.5rem;
-  color: #004aad;
-}
-
-.highlight-item p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Hover Effects */
-.highlight-item:hover {
-  transform: translateY(-5px); /* Slightly lift the item */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
-  background-color: #f9f9ff; /* Subtle background change */
-}
-
-.highlight-item:hover h3 {
-  color: #002d6f; /* Darker shade for heading */
-}
-
-.highlight-item:hover p {
-  color: #333; /* Darker shade for text */
 }
